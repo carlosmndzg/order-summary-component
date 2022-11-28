@@ -1,0 +1,169 @@
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+  --white: hsl(0, 0%, 100%);
+  --less-bright-blue: hsl(245, 75%, 56%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+body {
+  background-image: url("/images/pattern-background-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-color: var(--pale-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2.4rem;
+  min-height: 100vh;
+}
+
+.card {
+  max-width: 40rem;
+  overflow: hidden;
+  background-color: var(--white);
+  border-radius: 2rem;
+}
+
+.card__img {
+  width: 100%;
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  text-align: center;
+  padding: 2.4rem;
+}
+
+.card__text {
+  padding: 0 1.7rem;
+  margin-bottom: 1rem;
+}
+
+.card__title {
+  color: var(--dark-blue);
+  font-size: 2.4rem;
+  font-weight: 900;
+  margin-bottom: 2rem;
+}
+
+.card__paragraph {
+  font-size: 1.5rem;
+  color: var(--desaturated-blue);
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.card__plan-content {
+  background-color: var(--very-pale-blue);
+  padding: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  margin-bottom: 0.8rem;
+  border-radius: 0.8rem;
+}
+
+.card__plan-title {
+  color: var(--dark-blue);
+  font-size: 1.4rem;
+  font-weight: 900;
+  margin-bottom: 0.3rem;
+}
+
+.card__price {
+  font-size: 1.4rem;
+  color: var(--desaturated-blue);
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.card__change:link,
+.card__change:visited {
+  margin-left: auto;
+  font-weight: 700;
+  color: var(--bright-blue);
+  font-size: 1.4rem;
+}
+
+.card__change:hover,
+.card__change:active {
+  color: var(--less-bright-blue);
+}
+
+.card__btn {
+  border: none;
+  border-radius: 0.8rem;
+  background-color: transparent;
+  color: var(--desaturated-blue);
+  font-weight: 700;
+  font-family: inherit;
+  padding: 1.4rem;
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+
+.card__btn:hover {
+  color: var(--dark-blue);
+}
+
+.cta {
+  background-color: var(--bright-blue);
+  color: var(--white);
+  box-shadow: 0 0.8rem 1.6rem 0 hsla(245, 75%, 52%, 0.2);
+}
+
+.cta:hover {
+  background-color: var(--less-bright-blue);
+  color: var(--white);
+}
+
+@media (min-width: 37em) {
+  html {
+    font-size: 65%;
+  }
+
+  body {
+    background-image: url("/images/pattern-background-desktop.svg");
+  }
+
+  .card__content {
+    padding: 3rem 4.5rem;
+  }
+
+  .card__text {
+    padding: 0 1.7rem;
+  }
+
+  .card__btn {
+    font-size: 1.4rem;
+  }
+}
+
+/* ATTRIBUTION */
+
+.attribution {
+  font-size: 1.1rem;
+  text-align: center;
+}
+.attribution a {
+  color: var(--less-bright-blue);
+}
